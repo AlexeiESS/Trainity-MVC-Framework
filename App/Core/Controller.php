@@ -16,12 +16,12 @@ abstract class Controller {
 	protected $upl;
 	protected $api;
 
-	public function __construct($get, $post, $route, $params) {
+	public function __construct($get, $post, $route, $params, $routes) {
 		$this->get = $get;
 		$this->post = $post;
 		$this->route = $route;
 		$this->params = $params;
-		$this->routes = json_encode(require_once APP.'Routes/web.php');
+		$this->routes = $routes;
 		$this->view = new View('public/');
 	}
 	public function loadModel() {
