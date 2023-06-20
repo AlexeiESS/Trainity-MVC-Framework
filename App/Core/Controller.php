@@ -41,7 +41,7 @@ abstract class Controller {
 		}
 		return $value;
 	}
-	public function loadCache($name){
+	public function loadCache($name, $ras='php', $dir=''){
 		$path = 'App\Libs\Cache';
 		$this->cache = new $path($name);
 	}
