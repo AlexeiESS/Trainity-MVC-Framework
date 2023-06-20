@@ -41,10 +41,10 @@ class Router {
 			if(class_exists($path)){
 				if(isset($this->params[0]) && method_exists($path, (string)$this->params[0])==true){
 					$func = (string)$this->params[0];
-					$controller = new $path($this->get, $this->post, $this->route, $this->params);
+					$controller = new $path($this->get, $this->post, $this->route, $this->params, $this->routes);
                     $controller->$func();
 				}else {
-				$controller = new $path($this->get, $this->post, $this->route, $this->params);
+				$controller = new $path($this->get, $this->post, $this->route, $this->params, $this->routes);
 				$controller->index();
 			}
 			}
