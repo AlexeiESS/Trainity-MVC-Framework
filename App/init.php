@@ -52,7 +52,7 @@ define('UPLOAD',$index.'Upload/');//https://example.com/Upload/
 define('ROUTES',$index.'App/Routes/web.php');
 define('APP',$engine.'/'); //https://example.com/App/
 define('LIBS',$engine.'/Libs/'); //https://example.com/App/Libs/
-define('INDEX',$index); // https://example.com/
+define('INDEX', 'https://'.$_SERVER['SERVER_NAME'].'/'); // https://example.com/
 
 
 //Подключение конфигов
